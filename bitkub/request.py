@@ -2,4 +2,4 @@ import requests
 
 
 def basic_request(method, url, headers={}, payload={}):
-    return requests.request(method, url, headers=headers, data=payload).json()
+    return requests.request(method, url, headers=headers, data=payload, timeout=60).json(timeout=60)
